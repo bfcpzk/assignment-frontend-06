@@ -1,0 +1,22 @@
+{
+  "followers": [
+    {
+      "netId": "jh17",
+      "name": "John",
+      "avatar": "http://n.sinaimg.cn/translate/20170726/Zjd3-fyiiahz2863063.jpg",
+      "status": "I'm John"
+    },
+    {
+      "netId": "jn34",
+      "name": "Jane",
+      "avatar": "http://pic.qiantucdn.com/58pic/28/44/63/358PICk58PICT58PICS26deF2j5fh_PIC2018.jpg!qt324",
+      "status": "I'm Jane"
+    },
+    {
+      "netId": "jy87",
+      "name": "Joey",
+      "avatar": "http://www.imeitou.com/uploads/allimg/2018041608/0h12idivcc4.jpg",
+      "status": "I'm Joey"
+    }
+  ]
+}

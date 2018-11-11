@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col-lg-8 col-md-8 col-sm-8">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <strong id="feed_post">Feed Post</strong>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="panel panel-danger panel-body">
+              <img [src]="imgUrl" class="img-rounded" alt="upload pic" width="120px" height="96px">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <textarea id="text_area" type="text" class="form-control" rows="6" [(ngModel)]="textContent" placeholder="write sth down"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4" style="text-align: center">
+            <label for="file" class="btn btn-default">add image</label>
+            <input id="file" type="file" style="display:none">
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4" style="text-align: center">
+            <span id="cancel" class="btn btn-danger" (click)="reset()">cancel</span>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4" style="text-align: center">
+            <button id="btn_post" class="btn btn-success" (click)="postFeed()">post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-sm-4 col-md-4">
+    <div class="row">
+      <div class="panel panel-success panel-body" style="height: 150px; margin-top: 43px;">
+        <div class="row" style="text-align: center">
+          <img src="{{album}}" alt="Rice gallery" class="img-rounded" width="140px" height="120px">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 col-md-8 col-lg-8">
+        <input id="searchbar" type="text" class="form-control" [(ngModel)]="searchCondition" placeholder="search area">
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <button id="btn_search" class="btn btn-success" (click)="searchPost()">search</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="panel panel-success" style="margin-left: 15px; margin-top: 6px">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <strong>Feed Area</strong>
+      </div>
+    </div>
+    <div class="panel-body" style="height:500px; overflow-y:auto">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-lg-4 article" *ngFor="let feed of searchRes; index as i">
+          <div class="panel panel-success panel-body" id="post_{{i}}">
+            <div class="row">
+              <div class="col-sm-5 col-md-5 col-lg-5">
+                <div class="badge article_author">
+                  <span class="glyphicon glyphicon-user"></span>{{feed.author}}
+                </div>
+              </div>
+              <div class="col-sm-7 col-md-7 col-lg-7">
+                <span class="label label-info" style="margin-right: 10px">{{feed.create_time}}</span>
+              </div>
+            </div>
+            <div class="row" style="text-align: center; margin-top: 5px">
+              <img src="{{feed.pic}}" class="img-rounded" alt="feed pic" width="120px" height="96px">
+            </div>
+            <div class="row" style="margin-top: 5px">
+              <div class="panel panel-default panel-body article_content" style="height: 100px; overflow-y: auto" id="post_{{i}}_content">
+                {{feed.content}}
+              </div>
+            </div>
+            <div class="row" style="text-align: center; margin-top: 5px">
+              <button class="btn btn-success" style="margin-right: 20px">Edit</button>
+              <button class="btn btn-info" (click)="showComments(i)">Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

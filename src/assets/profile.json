@@ -1,0 +1,40 @@
+{
+  "users":[
+    {
+      "netId": "zp7",
+      "account_name": "bfcpzk",
+      "display_name" : "Mike Pan",
+      "zipcode": "12345",
+      "email" : "bfcpzk@163.com",
+      "phone" : "713-492-8238",
+      "date_of_birth" : "2000-07-23",
+      "password":"123456",
+      "headline": "CS graduate student",
+      "profile": "https://assets.leetcode.com/users/bfcpzk/avatar_1521947975.png"
+    },
+    {
+      "netId": "jw101",
+      "account_name": "wjj",
+      "display_name" : "JJ Wang",
+      "zipcode": "32342",
+      "email" : "jw101@rice.edu",
+      "phone" : "713-431-2435",
+      "date_of_birth" : "1996-07-23",
+      "password":"234567",
+      "headline": "love life",
+      "profile": "https://media.licdn.com/dms/image/C4E03AQGKBgLCyi8Kyg/profile-displayphoto-shrink_800_800/0?e=1544054400&v=beta&t=ydqX_tZhjorCIWmKHdXaUr8r_omhloIQNY7HX5Oeu50"
+    },
+    {
+      "netId": "bb34",
+      "account_name": "Bob",
+      "display_name" : "Big Bob",
+      "zipcode": "43544",
+      "email" : "bb34@rice.edu",
+      "phone" : "713-432-9859",
+      "date_of_birth" : "2001-07-23",
+      "password":"345678",
+      "headline": "Basketball lover",
+      "profile": "assets/owl.jpg"
+    }
+  ]
+}
